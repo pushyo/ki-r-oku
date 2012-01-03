@@ -1,0 +1,16 @@
+<h1>Ki(r)oku</h1>
+
+<p>Please enter your login information:</p>
+<%= form_for(:session, :url => sessions_path) do |f| %>
+  <div>
+    <%= f.label :email %><br/>
+    <%= f.text_field :email %>
+  </div>
+  <div>
+    <%= f.label :password %><br/>
+    <%= f.password_field :password %>
+  </div>
+  <div>
+    <%= f.submit "Log in" %>
+  </div>
+<% end %>

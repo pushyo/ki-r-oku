@@ -3,6 +3,10 @@ class User < ActiveRecord::Base
   # provides password and password_confirmation
   has_secure_password
 
+  def self.authenticate(email, password)
+    User.find_by_email(email).try( :authenticate, password )
+  end
+
   email_regex = /\A[a-z\d][\w+\-.]*@[a-z\d\-.]+\.[a-z]{2,4}\z/i
 
   validates :name,      :presence => true,
