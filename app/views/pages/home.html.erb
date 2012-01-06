@@ -1,1 +1,9 @@
 <h1>Ki(r)oku Home</h1>
+<% if current_user %>
+<p>Welcome, <%= current_user.name %></p>
+<% end %>
+<% if current_user %>
+<%= link_to "Sign out", signout_path %>
+<% else %>
+<%= link_to "Sign in", signin_path %>
+<% end %>
