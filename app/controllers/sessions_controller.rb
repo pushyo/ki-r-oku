@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
     if user = User.authenticate(params[:session][:email], 
                                 params[:session][:password]) 
       sign_in user
+      flash[:success] = "Welcome, #{user.name}!"
       redirect_to user
     else
       @title = 'Sign in'
