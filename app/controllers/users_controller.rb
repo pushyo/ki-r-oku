@@ -18,4 +18,10 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
+
+  def edit
+    @user = User.find(params[:id])
+    @title = "Edit profile"
+  end
+
 end

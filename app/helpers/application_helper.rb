@@ -5,4 +5,8 @@ module ApplicationHelper
     return base_title + " | " + @title unless @title.nil?
     base_title
   end
+
+  def signed_in?
+    !current_user.nil?
+  end
 end
