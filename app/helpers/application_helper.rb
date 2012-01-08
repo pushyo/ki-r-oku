@@ -6,7 +6,4 @@ module ApplicationHelper
     base_title
   end
 
-  def signed_in?
-    !current_user.nil?
-  end
 end

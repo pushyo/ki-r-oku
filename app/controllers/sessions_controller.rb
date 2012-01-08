@@ -10,10 +10,10 @@ class SessionsController < ApplicationController
                                 params[:session][:password]) 
       sign_in user
       flash[:success] = "Welcome, #{user.name}!"
-      redirect_to user
+      redirect_back_or user
     else
       @title = 'Sign in'
-      render :new
+      render 'new'
     end
   end
 
@@ -21,15 +21,5 @@ class SessionsController < ApplicationController
     sign_out
     redirect_to root_path
   end
-
-  private
-    def sign_in( user )
-      cookies.permanent.signed[:remember_me] = [ user.id, user.salt ]
-    end
-      
-    def sign_out
-      cookies.delete(:remember_me)
-      current_user = nil
-    end
 
 end
