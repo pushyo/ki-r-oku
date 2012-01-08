@@ -7,10 +7,4 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user
 
-  protected
-
-  def authenticate
-    deny_access unless signed_in?
-  end
-
 end

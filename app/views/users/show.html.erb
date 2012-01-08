@@ -1,5 +1,5 @@
 <h1><%= @user.name %></h1>
 <%= @user.email %>
-<% if signed_in? %>
+<% if current_user?(@user) %>
   <p>Edit profile <%= link_to "settings", edit_user_path %></p>
 <% end %>
