@@ -1,7 +1,9 @@
     <tr>
       <td><%= link_to user.name, user %></td>
       <td>suscribed <%= time_ago_in_words(user.created_at) %> ago</td>
+      <% if current_user.admin? %>
       <td><%= link_to "delete", user, :method => :delete, 
                                 :confirm => "are you sure?", 
                                 :title => "Delete #{user.name}" %></td>
+      <% end %>
     </tr>

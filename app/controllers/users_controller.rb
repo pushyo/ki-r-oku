@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 before_filter :authenticate, :only => [:index, :edit, :update]
 before_filter :check_user, :only => [:edit, :update]
+before_filter :check_admin, :only => :destroy
   
   def index
     @title = "All users"
@@ -53,6 +54,10 @@ before_filter :check_user, :only => [:edit, :update]
   def check_user
     @user = User.find_by_id(params[:id])
     redirect_to root_path unless current_user?(@user) 
+  end
+
+  def check_admin
+    redirect_to root_path unless current_user.admin?
   end
 
 end
