@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
-before_filter :authenticate, :only => [:edit, :update]
+before_filter :authenticate, :only => [:index, :edit, :update]
 before_filter :check_user, :only => [:edit, :update]
   
   def index
-    @title = "users"
-    @users = User.all
+    @title = "All users"
+    @users = User.paginate(:page => params[:page])
   end
 
   def show
@@ -37,6 +37,11 @@ before_filter :check_user, :only => [:edit, :update]
       @title = "Edit profile"
       render 'edit'
     end
+  end
+
+  def destroy
+    User.find(params[:id]).destroy
+    redirect_to users_path
   end
   
   protected
