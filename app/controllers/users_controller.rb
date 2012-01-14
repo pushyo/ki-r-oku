@@ -10,6 +10,7 @@ before_filter :check_admin, :only => :destroy
 
   def show
     @user = User.find(params[:id])
+    @records = @user.records.paginate(:page => params[:page])
   end
 
   def new

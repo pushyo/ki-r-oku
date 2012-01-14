@@ -1,10 +1,8 @@
 <h1>Ki(r)oku Home</h1>
 <% if signed_in? %>
-  <p>Welcome, <%= current_user.name %></p>
-<% end %>
-
-<% if signed_in? %>
-  <%= link_to "Sign out", signout_path %>
+  <p>Welcome, <%= current_user.name %>
+  <%= link_to "Sign out", signout_path %></p>
+  <%= render 'shared/record_form' %>
 <% else %>
   <%= link_to "Sign in", signin_path %>
 <% end %>

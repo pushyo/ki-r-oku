@@ -1,11 +1,13 @@
 Kiroku::Application.routes.draw do
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
+  resources :records, :only => [:index, :create]
 
   match '/signup', :to => 'users#new'
   match '/signin', :to => 'sessions#new'
   match '/signout',:to => 'sessions#destroy'
 
+  match '/feed', :to => 'pages#feed'
   match '/contact', :to => 'pages#contact'
 
   root :to => 'pages#home'

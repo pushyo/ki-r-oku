@@ -1,0 +1,5 @@
+    <table>
+    <tr><td><%= record.user.name %></td></tr>
+      <tr><td><%= record.title %></td></tr>
+      <tr><td><%= record.content.truncate 50, :separator => ' ' %></td></tr>
+    </table>

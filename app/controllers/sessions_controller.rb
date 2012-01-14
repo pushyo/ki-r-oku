@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
                                 params[:session][:password]) 
       sign_in user
       flash[:success] = "Welcome, #{user.name}!"
-      redirect_back_or user
+      redirect_back_or root_path
     else
       @title = 'Sign in'
       render 'new'
