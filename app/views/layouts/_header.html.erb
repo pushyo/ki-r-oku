@@ -1,10 +1,19 @@
 <header>
-  <nav>
-    <ul>
-      <li><%= link_to "Home", root_path %></li>
-      <% if signed_in? %>
-      <li><%= link_to "Profile", current_user %>
-      <% end %>
-    </ul>
-  </nav>
+  <div id="banner">
+    <div id="banner-left" class="centered" >
+     <%= link_to root_path do %>
+       <h1>Ki<red>|r|</red>oku</h1>
+     <% end %>
+     <small>record your thoughts</small>
+    </div>
+    <div id="banner-right" class="centered" >
+    <% if signed_in? %>
+      Welcome, <%= link_to current_user.name, current_user %>
+    <% end %>
+      <div class="banner-links">
+        <% if signed_in? %><%= link_to "Sign out", signout_path %>
+        <% else %><%= link_to "Sign in", signin_path %><% end %>
+      </div>
+    </div>
+  </div>
 </header>

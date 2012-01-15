@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  font-family: arial, sans-serif;
+  /*background-image:url( '/assets/papyrus_alpha.png');*/
+  color: #111111;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+#banner {
+  width: 100%;
+  height: 60px;
+  /*background-color: #eee8aa;*/
+  background-color: #666666;
+  color: #eeeeee;
+  text-decoration: none;
+}
+#banner-right {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  margin-right: 10px;
+}
+#banner-right a {
+  color: white;
+}
+.banner-links {
+  display: inline;
+  padding: 20px 0 20px 0;
+  margin-left: 10px;
+}
+.centered {
+  padding-top: 10px;
+  margin-top: 0;
+}
+
+#banner-left a {
+  margin: 0 0 0 50px;
+}
+header h1 {
+  display: inline;
+}
+header red {
+  color: #d00000;
+}
+div#banner-right a:hover, .banner-links :hover {
+  background-color: #aaaaaa;
+}
