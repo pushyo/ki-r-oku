@@ -1,17 +1,24 @@
-<h1>Ki(r)oku</h1>
+<div id="login-area">
+  <h1>Ki(r)oku</h1>
 
-<p>Please enter your login information:</p>
-<%= form_for(:session, :url => sessions_path) do |f| %>
-  <div>
-    <%= f.label :email %><br/>
-    <%= f.text_field :email %>
+  <p>Please enter your login information:</p>
+  <div class="form-box">
+  <%= form_for(:session, :url => sessions_path) do |f| %>
+    <div>
+      <%= f.label :email %><br/>
+      <%= f.text_field :email %>
+    </div>
+    <div>
+      <%= f.label :password %><br/>
+      <%= f.password_field :password %>
+    </div>
+    <div class="submit">
+      <%= f.submit "Log in" %>
+    </div>
+  <% end %>
   </div>
-  <div>
-    <%= f.label :password %><br/>
-    <%= f.password_field :password %>
-  </div>
-  <div>
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-<p>Not a user yet? <%= link_to "Create an accout", signup_path %></p>
+  <p>Not a user yet? <%= link_to "Create an accout", signup_path %></p>
+</div>
+<div id="papyrus">
+  <%= image_tag "papyrus_transparent50.png", :height => "200" %>
+</div>

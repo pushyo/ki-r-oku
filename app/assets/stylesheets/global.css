@@ -4,11 +4,12 @@ body {
   /*background-image:url( '/assets/papyrus_alpha.png');*/
   color: #111111;
 }
-
-a {
-  text-decoration: inherit;
-  color: inherit;
+.container {
+margin: auto;
+text-align: left;
+width: 960px;
 }
+
 
 #banner {
   width: 100%;
@@ -17,6 +18,10 @@ a {
   background-color: #666666;
   color: #eeeeee;
   text-decoration: none;
+}
+#banner a {
+  text-decoration: inherit;
+  color: inherit;
 }
 #banner-right {
   position: absolute;
@@ -48,4 +53,20 @@ header red {
 }
 div#banner-right a:hover, .banner-links :hover {
   background-color: #aaaaaa;
+}
+#error_explanation {
+color: red;
+border: solid 1px red;
+display: inline-block;
+padding: 5px;
+margin: 5px 0;
+}
+#error_explanation li {
+list-style: none;
+}
+#error_explanation ul {
+margin: 0;
+}
+.field_with_errors {
+margin: inherit;
 }

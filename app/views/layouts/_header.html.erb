@@ -8,7 +8,7 @@
     </div>
     <div id="banner-right" class="centered" >
     <% if signed_in? %>
-      Welcome, <%= link_to current_user.name, current_user %>
+      Welcome, <%= link_to current_user.name.capitalize, current_user %>
     <% end %>
       <div class="banner-links">
         <% if signed_in? %><%= link_to "Sign out", signout_path %>

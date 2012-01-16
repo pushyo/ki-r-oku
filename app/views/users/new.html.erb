@@ -1,8 +1,16 @@
-<h1>Sign up</h1>
+<div id="login-area">
+  <h1>Sign up</h1>
 
-<%= form_for(@user) do |f| %>
-  <%= render 'fields', :f => f %>
-  <div>
-    <%= f.submit "Sign'up" %>
+  <p>Please fill in following informations:</p>
+  <div class="form-box">
+    <%= form_for(@user) do |f| %>
+      <%= render 'fields', :f => f %>
+      <div class="submit">
+        <%= f.submit "Sign'up" %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+ </div>
+<div id="papyrus">
+  <%= image_tag "papyrus_transparent50.png", :height => "200" %>
+</div>

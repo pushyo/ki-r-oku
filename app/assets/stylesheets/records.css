@@ -1,0 +1,14 @@
+.record-form {
+  display: inline-block;
+}
+.record-form textarea, .record-form input[type="text"] {
+  font-size: 120%;
+  padding: 3px;
+  border: solid 1px #999999;
+  margin: 5px 0;
+}
+.record-form input[type="submit"] {
+  float: right;
+  position: relative;
+  top: 10px;
+}

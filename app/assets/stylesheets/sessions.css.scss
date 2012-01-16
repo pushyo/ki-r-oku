@@ -1,0 +1,31 @@
+a {
+text-decoration: none;
+}
+#login-area {
+position: absolute;
+top: 25%;
+right:0;
+width:35em;
+}
+#papyrus {
+position: absolute;
+right: 35em;
+top: 35%;
+}
+.form-box {
+display: inline-block;
+border: solid 1px #bbbbbb;
+padding: 5px;
+background-color: paleGoldenRod;
+white-space: nowrap;
+}
+.submit input {
+margin-top: 5px;
+border: solid 1px #666666;
+background-color: #666666;
+color: #ffffff;
+font-weight: bold;
+}
+.submit input:hover {
+background-color: #999999;
+}
