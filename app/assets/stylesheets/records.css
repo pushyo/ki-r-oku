@@ -12,3 +12,46 @@
   position: relative;
   top: 10px;
 }
+.records-feed {
+  min-width: 40em;
+  display: inline-block;
+  margin-top: 20px;
+}
+.record-item {
+  border-bottom: solid 1px #aaaaaa;
+  padding-bottom: 9px;
+  margin-bottom: 10px;
+}
+.record-header {
+  color: #666666; 
+}
+.record-title {
+  font-weight: bold;
+  color: #568e90;
+}
+.wrapper {
+  float:left;
+  margin-right:20px;
+}
+.clear {
+  clear: both;
+}
+.record-item input[type="submit"] {
+  margin: 0px 20px;
+  padding: 2px 6px;
+  font-weight: bold;
+  background-color: #999999;
+  color: #eeeeee;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  border: solid 1px #666666;
+  vertical-align: bottom;
+}
+.record-item  input[type="submit"]:hover {
+  background-color: #aaaaaa;
+  border: solid 2px;
+}
+.record-header form, .record-header div {
+  display: inline;
+}

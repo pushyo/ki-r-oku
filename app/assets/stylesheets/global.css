@@ -1,20 +1,26 @@
 body {
   margin: 0;
-  font-family: arial, sans-serif;
   /*background-image:url( '/assets/papyrus_alpha.png');*/
+  font-family: Helvetica,Arial;
   color: #111111;
+}
+body h1 {
+  font-size: 170%;
+}
+body h2 {
+  font-size: 120%;
 }
 .container {
 margin: auto;
 text-align: left;
 width: 960px;
+padding-top: 20px;
 }
 
 
 #banner {
   width: 100%;
   height: 60px;
-  /*background-color: #eee8aa;*/
   background-color: #666666;
   color: #eeeeee;
   text-decoration: none;
@@ -69,4 +75,9 @@ margin: 0;
 }
 .field_with_errors {
 margin: inherit;
+}
+.stats {
+  color: #999999;
+  font-size: 80%;
+  padding-left: 3px;
 }

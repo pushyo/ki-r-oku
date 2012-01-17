@@ -1,5 +1,16 @@
-    <table>
-    <tr><td><%= record.user.name %></td></tr>
-      <tr><td><%= record.title %></td></tr>
-      <tr><td><%= record.content.truncate 50, :separator => ' ' %></td></tr>
-    </table>
+    <div class="record-item">
+      <div class="wrapper">
+        <div class="record-title"><%= record.title %></div>
+        <div class="record-header">
+          Started <%= record_start_time(record) %>
+            <%= record_owner_display(record) %>
+            <%= button_to "View", "#" %>
+        </div>
+        <div class="record-tags"><% "#TODO" %></div>
+        <div class="record-head">
+          <%= record_content_head(record) %>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
