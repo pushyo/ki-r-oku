@@ -1,7 +1,7 @@
 Kiroku::Application.routes.draw do
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
-  resources :records, :only => [:index, :create]
+  resources :records, :only => [:index, :show, :create, :edit, :new, :update]
 
   match '/signup', :to => 'users#new'
   match '/signin', :to => 'sessions#new'

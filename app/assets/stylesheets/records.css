@@ -22,7 +22,7 @@
   padding-bottom: 9px;
   margin-bottom: 10px;
 }
-.record-header {
+.record-info {
   color: #666666; 
 }
 .record-title {
@@ -36,11 +36,13 @@
 .clear {
   clear: both;
 }
-.record-item input[type="submit"] {
+.action-buttons {
   margin: 0px 20px;
+}
+.view-button, .edit-button, .delete-button {
+  margin-right: 5px;
   padding: 2px 6px;
   font-weight: bold;
-  background-color: #999999;
   color: #eeeeee;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
@@ -48,10 +50,38 @@
   border: solid 1px #666666;
   vertical-align: bottom;
 }
-.record-item  input[type="submit"]:hover {
-  background-color: #aaaaaa;
+.view-button:hover, .edit-button:hover, .delete-button:hover {
   border: solid 2px;
 }
-.record-header form, .record-header div {
+.view-button {
+  background-color: darkSeaGreen;
+}
+.view-button:hover {
+  background-color: #aaaaaa;
+}
+.edit-button {
+  background-color: limeGreen;
+}
+.edit-button:hover {
+  background-color: lime;
+}
+.delete-button {
+  margin-left: 30px;
+  background-color: #aaaaaa;
+  padding: 2px;
+}
+.delete-button:hover {
+  background-color: #aaaaaa;
+}
+.record-info form, .record-info div {
   display: inline;
+}
+.record-show {
+  margin-top: 50px;
+}
+.record-content {
+  margin-top: 20px;
+}
+.record-content p {
+ margin: 5px; 
 }

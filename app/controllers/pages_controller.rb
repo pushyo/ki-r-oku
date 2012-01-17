@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def home
     @title = "Home"
-    @record = Record.new if signed_in?
+    redirect_to new_record_path if signed_in?
   end
 
   def contact

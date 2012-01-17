@@ -1,10 +1,12 @@
     <div class="record-item">
       <div class="wrapper">
-        <div class="record-title"><%= record.title %></div>
-        <div class="record-header">
+        <div class="record-title">
+          <%= record.title %>
+        </div>
+        <div class="record-info">
           Started <%= record_start_time(record) %>
             <%= record_owner_display(record) %>
-            <%= button_to "View", "#" %>
+            <%= render 'records/action_buttons', :record => record %>
         </div>
         <div class="record-tags"><% "#TODO" %></div>
         <div class="record-head">

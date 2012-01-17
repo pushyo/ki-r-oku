@@ -1,0 +1,9 @@
+<div class="record-show">
+  <div class="record-info">
+     Started <%= record_start_time(@record) %>
+     <%= record_owner_display(@record) %>
+  </div>
+  <div class="record-content">
+    <%= simple_format word_wrap(@record.content, :line_width => 100) %>
+  </div>
+</div>

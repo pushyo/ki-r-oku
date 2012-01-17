@@ -6,10 +6,11 @@ module RecordsHelper
   end
  
   def record_owner_display(record)
-    if params[:action] == "feed" 
-      ("by " + link_to( record.user.name.capitalize, user_path(record.user) ) )
+     unless [params[:action], params[:controller]] == ["index", "records"]
+      user_name = current_user?(record.user) ? "You" : record.user.name.capitalize
+      ("by " + link_to(user_name, user_path(record.user)) )
       .html_safe
-    end
+     end
   end
 
   def record_content_head(record)
@@ -19,8 +20,10 @@ module RecordsHelper
     content_preview = word_wrap( content.match( /(?:.*\n){0,10}[^\n]*/ )[0].gsub( /[\r\n]+/, "\n"),
                                  :line_width => 80 
                                  ).match( /(?:.*\n){0,2}[^\n]*/ )[0]
-      content_preview += " ... " if (content_preview.length + 10 <= content.length)
-      content_preview += '<span class="stats">(' + record.word_count + ' words)</span>' if record.word_count
+    if (content_preview.length + 10 <= content.length) && record.word_count
+        content_preview += " ... " \
+                  + '<span class="stats">(' + record.word_count + ' words)</span>' 
+    end
     simple_format(content_preview ) 
   end
 
