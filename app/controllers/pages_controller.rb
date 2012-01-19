@@ -1,7 +1,8 @@
 class PagesController < ApplicationController
   def home
-    @title = "Home"
     redirect_to new_record_path if signed_in?
+    @title = "Home"
+    @records = Record.published.paginate( :page => 1, :per_page => 5 )
   end
 
   def contact

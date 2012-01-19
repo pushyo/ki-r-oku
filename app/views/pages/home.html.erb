@@ -1,1 +1,15 @@
 <h1>Ki(r)oku Home</h1>
+<div>
+  <div class="kiroku-description">
+    <p>
+      <strong>Kiroku</strong> is a platform for uploading, and managing one's thoughts, <br/>
+      or <strong>records</strong>, with the possibility of <strong>publishing</strong> them in the form of <br/>
+      articles.
+    </p>
+    <p>Not a user yet? <%= link_to "Create an accout", signup_path %></p>
+  </div>
+  <div class="mini-feed">
+  <h2>Recent activities:</h2>
+    <%= render @records %>
+  </div>
+</div>

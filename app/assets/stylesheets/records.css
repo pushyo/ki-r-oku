@@ -13,14 +13,14 @@
   top: 10px;
 }
 .records-feed {
-  min-width: 40em;
+  min-width: 30em;
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .record-item {
   border-bottom: solid 1px #aaaaaa;
-  padding-bottom: 9px;
-  margin-bottom: 10px;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
 }
 .record-info {
   color: #666666; 
@@ -28,6 +28,9 @@
 .record-title {
   font-weight: bold;
   color: #568e90;
+}
+.record-head p {
+  margin: 5px 0;
 }
 .wrapper {
   float:left;
@@ -37,9 +40,15 @@
   clear: both;
 }
 .action-buttons {
-  margin: 0px 20px;
+  margin: 15px 0 0 0;
+}
+.edit-button, .delete-button {
+}
+.action-buttons form, .action-buttons div {
+  display: inline-block;
 }
 .view-button, .edit-button, .delete-button {
+  display: inline;
   margin-right: 5px;
   padding: 2px 6px;
   font-weight: bold;
@@ -69,9 +78,6 @@
 }
 .delete-button:hover {
   background-color: lightslateGray;
-}
-.record-info form, .record-info div {
-  display: inline;
 }
 .record-show {
   margin-top: 50px;

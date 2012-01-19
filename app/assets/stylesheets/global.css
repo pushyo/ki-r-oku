@@ -32,10 +32,10 @@ body h2 {
   background: #bbbbbb;
 }
 .container {
-  padding-left: 25px;
-  margin: auto;
+  padding-left: 30px;
+  margin-left: auto; 
   text-align: left;
-  width: 860px;
+  min-width: 860px;
   padding-top: 20px;
 }
 
@@ -101,4 +101,24 @@ margin: inherit;
   color: #999999;
   font-size: 80%;
   padding-left: 3px;
+}
+.mini-feed {
+  float: left;
+  margin-left: 50px;
+  display: inline-block;
+  max-width: 25em;
+}
+.mini-feed p {
+  margin: 5px 0;
+  }
+.kiroku-description {
+  float: left;
+  display: inline-block;
+  margin: 90px 30px;
+  border: solid 1px #bbbbbb;
+  padding: 10px;
+  background-color: #dddddd;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -border-radius: 5px;
 }
