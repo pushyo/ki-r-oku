@@ -1,6 +1,6 @@
 class RecordsController < ApplicationController
   def index
-    @records = current_user.records.paginate(:page => params[:page])
+    @records = current_user.records.paginate(:page => params[:page], :per_page => 20)
   end
 
   def new
@@ -33,5 +33,10 @@ class RecordsController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    Record.find(params[:id]).destroy
+    redirect_to records_path
   end
 end

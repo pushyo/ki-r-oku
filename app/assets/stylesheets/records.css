@@ -50,14 +50,11 @@
   border: solid 1px #666666;
   vertical-align: bottom;
 }
-.view-button:hover, .edit-button:hover, .delete-button:hover {
-  border: solid 2px;
-}
 .view-button {
   background-color: darkSeaGreen;
 }
 .view-button:hover {
-  background-color: #aaaaaa;
+  background-color: lightslateGray;
 }
 .edit-button {
   background-color: limeGreen;
@@ -71,7 +68,7 @@
   padding: 2px;
 }
 .delete-button:hover {
-  background-color: #aaaaaa;
+  background-color: lightslateGray;
 }
 .record-info form, .record-info div {
   display: inline;

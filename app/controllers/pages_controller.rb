@@ -10,7 +10,7 @@ class PagesController < ApplicationController
 
   def feed
     @title = "Feed"
-    @records = Record.paginate(:page => params[:page])
+    @records = Record.paginate(:page => params[:page], :per_page =>20)
   end
 
 end
