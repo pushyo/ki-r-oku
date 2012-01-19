@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-before_filter :authenticate, :only => [:index, :edit, :update]
+before_filter :authenticate, :only => [:index, :show, :edit, :update]
 before_filter :check_user, :only => [:edit, :update]
 before_filter :check_admin, :only => :destroy
   

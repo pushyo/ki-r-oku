@@ -12,10 +12,11 @@
       <tr>
       <% if signed_in? %>
         <td width="150" valign="top" class="nav">
-          <%= render 'layouts/navigation' %>
+          <%= render 'layouts/navigation', :flash => flash %>
         </td>
       <% end %>
         <td valign="top" class="container">
+        <%= render 'layouts/flash', :flash => flash %>
             <%= yield %>
         </td>
       </tr>

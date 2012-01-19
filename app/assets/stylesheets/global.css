@@ -122,3 +122,13 @@ margin: inherit;
   -webkit-border-radius: 5px;
   -border-radius: 5px;
 }
+.flash {
+  font-weight: bold;
+  display: inline-block;
+  padding: 10px;
+  margin: 5px 0;
+}
+.flash.notice {
+  color: cornflowerblue;
+  border: solid 3px;
+}
