@@ -3,8 +3,10 @@
 <% if current_user?(@user) %>
   <p>Edit profile <%= link_to "settings", edit_user_path %></p>
 <% end %>
-<h2>recently published:</h2>
-<div class="records-feed">
-  <%= render @records %> 
-  <%= will_paginate @records %>
-</div>
+<% unless @records.published.empty? %>
+  <h2>recently published:</h2>
+  <div class="records-feed">
+    <%= render @records %> 
+    <%= will_paginate @records %>
+  </div>
+<% end %>

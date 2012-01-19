@@ -1,2 +1,6 @@
 <h1>Your records</h1>
+<% if @records.empty? %>
+  You haven't written any record yet... <%= link_to "Start writing now!", new_record_path %>
+<% else %>
   <%= render @records %> 
+<% end %>

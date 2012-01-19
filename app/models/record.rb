@@ -10,6 +10,7 @@ class Record < ActiveRecord::Base
 
   before_save :count_words
   default_scope :order => 'records.created_at DESC'
+  scope :published #stub TODO : implement publish function
 
   private
     def count_words

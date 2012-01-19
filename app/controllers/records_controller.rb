@@ -10,9 +10,9 @@ class RecordsController < ApplicationController
   def create
     @record = current_user.records.build(params[:record])
     if @record.save
-      redirect_to root_path
+      redirect_to @record
     else
-      render 'pages/home'
+      render 'new'
     end
   end
 

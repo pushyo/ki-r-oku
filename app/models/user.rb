@@ -15,6 +15,8 @@ class User < ActiveRecord::Base
 
   validates :password,  :length   => { :within => 6..40 }
 
+  default_scope :order => "users.created_at DESC"
+
   def salt
     BCrypt::Password.new(password_digest).salt
   end
