@@ -49,10 +49,6 @@ before_filter :check_admin, :only => :destroy
   
   protected
 
-  def authenticate
-    deny_access unless signed_in?
-  end
-
   def check_user
     @user = User.find_by_id(params[:id])
     redirect_to root_path unless current_user?(@user) 

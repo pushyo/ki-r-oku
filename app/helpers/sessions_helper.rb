@@ -1,11 +1,13 @@
 module SessionsHelper
+
   def sign_in( user )
     cookies.permanent.signed[:remember_me] = [ user.id, user.salt ]
+    self.current_user = user
   end
     
   def sign_out
     cookies.delete(:remember_me)
-    current_user = nil
+    self.current_user = nil
   end
 
   def signed_in?
@@ -40,4 +42,8 @@ module SessionsHelper
     session[:return_to] = nil
   end
  
+  def authenticate
+    deny_access unless signed_in?
+  end
+
 end
