@@ -2,6 +2,7 @@ class RecordsController < ApplicationController
   before_filter :authenticate
   before_filter :check_user, :only => [:update, :edit, :destroy]
 
+
   def index
     @records = current_user.records.paginate(:page => params[:page], :per_page => 20)
   end

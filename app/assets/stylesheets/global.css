@@ -82,11 +82,11 @@ div#banner-right a:hover, .banner-links :hover {
   background-color: #aaaaaa;
 }
 #error_explanation {
-color: red;
-border: solid 1px red;
-display: inline-block;
-padding: 5px;
-margin: 5px 0;
+  color: red;
+  border: solid 1px red;
+  display: inline-block;
+  padding: 5px;
+  margin: 5px 0;
 }
 #error_explanation li {
 list-style: none;

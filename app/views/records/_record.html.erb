@@ -6,6 +6,9 @@
           Started <%= record_start_time(record) %>
             <%= record_owner_display(record) %>
         </div>
+        <div class="record-tags">
+          <%= record.tag_names %>
+         </div>
         <div class="record-tags"><% "#TODO" %></div>
         <div class="record-head">
           <%= record_content_head(record) %>

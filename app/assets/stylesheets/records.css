@@ -25,6 +25,10 @@
 .record-info {
   color: #666666; 
 }
+.record-tags {
+  color: darkGoldenRod;
+  font-size: 95%;
+}
 .record-title {
   font-weight: bold;
   color: #568e90;
